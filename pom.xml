@@ -10,7 +10,7 @@
     </parent>
     <groupId>com.jiale</groupId>
     <artifactId>spring-ai-demo</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>${spring-ai-demo.version}</version>
     <name>spring-ai-demo</name>
     <description>spring-ai-demo</description>
     <packaging>pom</packaging>
@@ -20,7 +20,7 @@
     </modules>
 
     <properties>
-        <java.version>17</java.version>
+        <spring-ai-demo.version>0.0.1-SNAPSHOT</spring-ai-demo.version>
     </properties>
 
     <dependencies>
@@ -38,6 +38,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
         </dependency>
     </dependencies>
 
