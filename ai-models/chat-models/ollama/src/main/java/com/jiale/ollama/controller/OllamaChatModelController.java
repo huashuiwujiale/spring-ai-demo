@@ -18,6 +18,7 @@ public class OllamaChatModelController {
 
     /**
      * 直接调用，等待生成结束返回
+     * AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=嗨！ how can I help you today？, metadata={messageType=ASSISTANT}]
      */
     @RequestMapping("/call")
     public String call() {
@@ -32,6 +33,15 @@ public class OllamaChatModelController {
 
     /**
      * 流式调用，边生成边返回
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=你, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=好, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=！, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=有什么, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=需要, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=帮助, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=吗, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=？, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='null', filters=0, metadata=0]]]
+     * [Generation[assistantMessage=AssistantMessage [messageType=ASSISTANT, toolCalls=[], textContent=, metadata={messageType=ASSISTANT}], chatGenerationMetadata=DefaultChatGenerationMetadata[finishReason='stop', filters=0, metadata=0]]]
      */
     @RequestMapping("/stream")
     public String stream() {
