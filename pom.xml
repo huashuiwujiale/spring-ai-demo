@@ -16,7 +16,10 @@
     <packaging>pom</packaging>
 
     <modules>
+        <!--AI大模型-->
         <module>ai-models</module>
+        <!--向量数据库-->
+        <module>vector-databases</module>
     </modules>
 
     <properties>
